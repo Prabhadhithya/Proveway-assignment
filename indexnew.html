@@ -1,0 +1,350 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proveway Assignment</title>
+<style>
+
+    .container{
+        width: 25%;
+        margin-left: 37.5%;
+    }
+
+    .bundle-container{
+        display: flex;   
+        align-items: center; 
+        width: 90%;  
+        margin: 2% auto;
+    }
+
+    .line{
+        border-top:1px solid gray; 
+        width: 30%; 
+        margin: 0 10px;
+    }
+
+    #bundle-save-text{
+        color: hsl(161, 58%, 41%);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 550;
+    }
+
+    button{
+        width:86%;
+        margin:3% 7%;
+        background-color: #f1fff4;
+        border-radius: 10px; 
+        border: 2px solid rgb(201, 247, 193);
+        font-weight: 550;
+    }
+
+    .pair-container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .selector-pair-container{
+        display: flex;
+        justify-content: space-around;
+        width: 45%;
+        margin-top: 2%;
+    }
+
+    .radio-selector{
+        margin: 10% 0;
+    }
+
+    .pair-sub-container2{
+        margin: 2% 0;
+        width: auto;
+    }
+
+    .discount{
+        margin: 6% 1%;
+    }
+
+    .size-color-heading{
+        display: flex; 
+        justify-content: left; 
+        margin:2% 14%;
+    }
+
+    .size-color-pair {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        margin-left: 20px;
+    }
+
+    .pair-number {
+        margin-right: 5px;
+        font-size: 0.9em;
+        color: #555;
+    }
+
+    .select-wrapper {
+        margin-right: 10px;
+        border: 2px solid rgb(201, 247, 193);
+    }
+
+    .size1{
+        width: 40%;
+    }
+
+    .shipping-total{
+        display: flex; 
+        justify-content: space-between; 
+        width: 84%; 
+        margin: 0% 8%; 
+        font-weight: 550;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    }
+
+    #powered-by {
+        text-align:end;
+        color: #777;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 550;
+        margin: 0% 10%;
+        width: 80%;
+    }
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="bundle-container">
+            <div class="line"></div>
+            <span id="bundle-save-text">Bundle & Save</span>
+            <div class="line"></div>
+        </div>
+        <button onclick="myfunction(this)" class = "selected-button">
+            <div class="pair-container">
+                <div class=selector-pair-container>
+                    <div class="radio-selector">
+                        <input type="radio" id="radio-1-pair" name="bundle-option" value="2" class="radio-button">
+                    </div>
+                    <div class="pair-sub-container2">
+                        <p style="margin: 0%; text-align: left;">1 Pair</p>
+                        <p style="margin: 0%; text-align: left;">DKK 195.00</p>
+                    </div>
+                </div>
+                <div class="discount">50% OFF</div>
+            </div >
+            <div class="size-color-select" id="size-color-1-pair" style="display:none;">
+                <div class="size-color-heading">
+                    <span>Size</span>
+                    <span style="margin-left: 15%;">Colour</span>
+                </div>
+                <div class="size-color-pair">
+                    <span class="pair-number">#1</span>
+                    <div class="select-wrapper">
+                        <select class="size-1">
+                            <option value="">Size</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+                    <div class="select-wrapper">
+                        <select id="color-1">
+                            <option value="">Colour</option>
+                            <option value="colour1">Colour 1</option>
+                            <option value="colour2">Colour 2</option>
+                            <option value="colour3">Colour 3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="size-color-pair">
+                    <span class="pair-number">#2</span>
+                    <div class="select-wrapper">
+                        <select class="size-2">
+                            <option value="">Size</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+                    <div class="select-wrapper">
+                        <select id="color-2">
+                            <option value="">Colour</option>
+                            <option value="colour1">Colour 1</option>
+                            <option value="colour2">Colour 2</option>
+                            <option value="colour3">Colour 3</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </button>
+
+        <button onclick="myfunction(this)" class = "selected-button">
+            <div class="pair-container">
+                <div class=selector-pair-container>
+                    <div class="radio-selector">
+                        <input type="radio" id="radio-1-pair" name="bundle-option" value="2" class="radio-button">
+                    </div>
+                    <div class="pair-sub-container2">
+                        <p style="margin: 0%; text-align: left;">2 Pair</p>
+                        <p style="margin: 0%; text-align: left;">DKK 345.00</p>
+                    </div>
+                </div>
+                <div style="margin-top: 8%; font-size: smaller;">
+                    <del>DKK 195</del>
+                </div>
+                <div>
+                    <p style="margin-bottom: 0%; margin-top: 10%; color: hsl(161, 58%, 41%);">Most Popular</p>
+                    <p style="margin: 0%;">40% OFF</p>
+                </div>
+            </div >
+            <div class="size-color-select" id="size-color-2-pair" style="display:none;">
+                <div class="size-color-heading">
+                    <span>Size</span>
+                    <span style="margin-left: 15%;">Colour</span>
+                </div>
+                <div class="size-color-pair">
+                    <span class="pair-number">#1</span>
+                    <div class="select-wrapper">
+                        <select class="size-1">
+                            <option value="">Size</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+                    <div class="select-wrapper">
+                        <select id="color-1">
+                            <option value="">Colour</option>
+                            <option value="colour1">Colour 1</option>
+                            <option value="colour2">Colour 2</option>
+                            <option value="colour3">Colour 3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="size-color-pair">
+                    <span class="pair-number">#2</span>
+                    <div class="select-wrapper">
+                        <select class="size-2">
+                            <option value="">Size</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+                    <div class="select-wrapper">
+                        <select id="color-2">
+                            <option value="">Colour</option>
+                            <option value="colour1">Colour 1</option>
+                            <option value="colour2">Colour 2</option>
+                            <option value="colour3">Colour 3</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </button>
+
+        <button onclick="myfunction(this)" class = "selected-button">
+            <div class="pair-container">
+                <div class=selector-pair-container>
+                    <div class="radio-selector">
+                        <input type="radio" id="radio-1-pair" name="bundle-option" value="2" class="radio-button">
+                    </div>
+                    <div class="pair-sub-container2">
+                        <p style="margin: 0%; text-align: left;">3 Pair</p>
+                        <p style="margin: 0%; text-align: left;">DKK 528.00</p>
+                    </div>
+                </div>
+                <div class="discount">60% OFF</div>
+            </div >
+            <div class="size-color-select" id="size-color-3-pair" style="display:none;">
+                <div class="size-color-heading">
+                    <span>Size</span>
+                    <span style="margin-left: 15%;">Colour</span>
+                </div>
+                <div class="size-color-pair">
+                    <span class="pair-number">#1</span>
+                    <div class="select-wrapper">
+                        <select id="size-1">
+                            <option value="">Size</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+                    <div class="select-wrapper">
+                        <select id="color-1">
+                            <option value="">Colour</option>
+                            <option value="colour1">Colour 1</option>
+                            <option value="colour2">Colour 2</option>
+                            <option value="colour3">Colour 3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="size-color-pair">
+                    <span class="pair-number">#2</span>
+                    <div class="select-wrapper">
+                        <select id="size-2">
+                            <option value="">Size</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+                    <div class="select-wrapper">
+                        <select id="color-2">
+                            <option value="">Colour</option>
+                            <option value="colour1">Colour 1</option>
+                            <option value="colour2">Colour 2</option>
+                            <option value="colour3">Colour 3</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </button>
+
+        <div class="shipping-total">
+            <p style="margin: 0%; color:hsl(161, 58%, 41%) ;">Free 2 Day Shipping</p>
+            <p style="margin: 0%;">Total:DKK 360.00</p>
+        </div>
+
+        <div>
+            <button style="background-color: hsl(161, 58%, 41%); height: 45px; color: whitesmoke; margin-bottom: 0%;">
+                +Add to Cart
+            </button>
+            <p id="powered-by">	&copy Powered by Pumper</p>
+        </div>
+
+    </div>
+</body>
+<script>
+    function myfunction(button) {
+        let radioButton = button.querySelector('.radio-button');
+        let sizeColorSelect = button.querySelector('.size-color-select');
+    
+        let isAlreadySelected = radioButton.checked;
+    
+        // Reset all buttons
+        document.querySelectorAll('.selected-button').forEach(btn => {
+            btn.style.border = "2px solid rgb(201, 247, 193)"; 
+            btn.style.backgroundColor = "#f1fff4"; 
+        });
+    
+        document.querySelectorAll('.radio-button').forEach(rb => rb.checked = false);
+        document.querySelectorAll('.size-color-select').forEach(sc => sc.style.display = 'none');
+    
+        if (!isAlreadySelected) {
+            radioButton.checked = true;
+            sizeColorSelect.style.display = 'block';
+            button.style.border = "2px solid hsl(161, 58%, 41%)"; 
+            button.style.backgroundColor = "#e6f9ec"; 
+        }
+    }
+    </script>
+</html>    
